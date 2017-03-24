@@ -13,8 +13,8 @@
     </div-->
     <div class="col-xs-12 col-md-12 section-box">
         <h2>
-            {{question.title}} <a href="http://bootsnipp.com/" target="_blank"><span class="glyphicon glyphicon-new-window">
-            </span></a>
+            {{question.title}}{{#link-to 'question' question.id}}<span class="glyphicon glyphicon-info-sign">
+            </span>{{/link-to}}
         </h2>
         <p>
             {{question.body}}
