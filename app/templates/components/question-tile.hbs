@@ -22,14 +22,14 @@
         <hr />
         <div class="row rating-desc">
             <div class="col-md-12">
-                <span class="glyphicon glyphicon-comment"></span>(100 Comments)<span class="separator">|</span>
+                <span class="glyphicon glyphicon-comment"></span>(100 Comments)<span class="separator">|{{update-question updateQuestion="updateQuestion" question=question}}</span>
             </div>
         </div>
     </div>
 
         </div>
         <div class="panel-footer text-center" style="width:4em;">
-            <button class="btn btn-warning">Edit</button>
+            <button type="button" name="button" class="btn btn-danger">Delete</button>
         </div>
     </div>
 {{/each}}

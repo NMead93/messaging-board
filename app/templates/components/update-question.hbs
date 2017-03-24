@@ -1,0 +1,17 @@
+<button class="btn btn-warning" type="button" {{action 'showUpdate'}}>Edit</button>
+{{#if updateShowing}}
+<form>
+    <div class="form-group">
+        {{input value=title class="form-control" placeholder=question.title}}
+    </div>
+    <div class="form-group">
+        {{input value=author class="form-control" placeholder=question.author}}
+    </div>
+    <div class="form-group">
+        {{textarea value=body class="form-control" placeholder=question.body}}
+    </div>
+    {{input type="hidden" value=post.date}}
+    <button type="submit" {{action 'updateQuestion' question}} name="button">Save Changes</button>
+</form>
+<button type="button" name="button" {{action 'hideUpdate'}}>Close</button>
+{{/if}}
