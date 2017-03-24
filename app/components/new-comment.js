@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+    formShowing: false,
     actions: {
-        saveComment() {
+        saveAnswer() {
             var params = {
                 author: this.get('author'),
                 body: this.get('body'),
@@ -11,7 +12,10 @@ export default Ember.Component.extend({
                 date: today(),
                 question: this.get('question')
             }
-            this.sendAction('saveComment', params);
+            this.sendAction('saveAnswer', params);
+        },
+        showForm() {
+            this.set('formShowing', true);
         }
     }
 });

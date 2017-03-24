@@ -6,5 +6,5 @@ export default DS.Model.extend({
     company: DS.attr(),
     body: DS.attr(),
     date: DS.attr(),
-    question: DS.belongsTo('answer', {async: true})
+    question: DS.belongsTo('question', {async: true})
 });

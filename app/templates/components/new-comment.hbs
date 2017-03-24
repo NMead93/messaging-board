@@ -1,23 +1,26 @@
-
 <div class="col-md-4">
+    {{#if formShowing}}
     <div class="form-area">
         <form role="form">
         <br style="clear:both">
-                    <h3 style="margin-bottom: 25px; text-align: center;">Write An Answer</h3>
+                    <h3 style="margin-bottom: 25px; text-align: center;">{{question.title}}</h3>
     				<div class="form-group">
-                        {{input value=author type="text" class="form-control" id="name" name="name" placeholder="Name"}}
+                        {{input value=author class="form-control" id="name" name="name" placeholder="Name"}}
 					</div>
 					<div class="form-group">
-                        {{input value=job type="text" class="form-control" id="email" name="email" placeholder="Job"}}
+                        {{input value=job class="form-control" id="email" name="email" placeholder="Job"}}
 					</div>
 					<div class="form-group">
-                        {{input value=company type="text" class="form-control" id="subject" name="subject" placeholder="Company"}}
+                        {{input value=company class="form-control" id="subject" name="subject" placeholder="Company"}}
 					</div>
                     <div class="form-group">
                         {{textarea value=body class="form-control"}}
                     </div>
 
-        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" {{action 'saveComment'}}>Submit Answer</button>
+        <button type="button" id="submit" class="btn btn-primary pull-right" {{action 'saveAnswer'}}>Submit Answer</button>
         </form>
     </div>
+    {{else}}
+    <button type="button" class="btn btn-primary pull-right" {{action 'showForm'}} name="button">Answer Question</button>
+    {{/if}}
 </div>
