@@ -1,7 +1,6 @@
 # message-board
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A question and answer messaging board where users can add and edit questions. Users can view an individual question page and answer the question.
 
 ## Prerequisites
 
