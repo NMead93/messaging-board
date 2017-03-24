@@ -1,1 +1,33 @@
-{{yield}}
+{{#if isFormShowing}}
+<div class="row">
+    <form role="form" id="contact-form" class="contact-form">
+                <div class="row">
+                    <div class="col-md-6">
+                    <div class="form-group">
+                        {{input value=author class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Name"}}
+                    </div>
+                </div>
+                    <div class="col-md-6">
+                    <div class="form-group">
+                        {{input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="Title" value=title}}
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="form-group">
+                        {{textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Question Body" value=body}}
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+              <button type="submit" class="btn main-btn pull-center" {{action 'saveQuestion'}}>Add Question</button>
+              <button type="button" class="btn main-btn pull-right" {{action 'formHide'}}>Hide Form</button>
+              </div>
+              </div>
+            </form>
+</div>
+{{else}}
+    <button class="btn main-btn" {{action 'formShow'}} name="button">Show Form</button>
+{{/if}}
